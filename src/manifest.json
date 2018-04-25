@@ -2,12 +2,12 @@
   "name": "Chrome Data Visualization",
   "version": "1.0",
   "description": "Build an Extension to visualize the data on the website!",
-  "permissions": ["declarativeContent", "storage"],
-  "background": {
-    "scripts": ["js/background.js"],
-    "persistent": false
-  },
-  "page_action": {
+  "permissions": ["declarativeContent", "storage", "https://unpkg.com/vue/dist/*", "https://unpkg.com/element-ui/*"],
+//  "background": {
+//    "scripts": ["js/background.js"],
+//    "persistent": false
+//  },
+  "browser_action": {
     // page or browser + action
     "default_popup": "html/default_popup.html",
     "default_icon": {
@@ -31,5 +31,6 @@
     "48": "assets/images/get_started48.png",
     "128": "assets/images/get_started128.png"
   },
+  "content_security_policy": "script-src 'self' 'sha256-qOmN3IJ0L9HH+B68LTdoTsDwG/U8m6WIngXVnzd02/I=' 'unsafe-eval'; object-src 'self'",
   "manifest_version": 2
 }
